@@ -1,7 +1,7 @@
 ROOT=`pwd`
 
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install scipy scikit-image matplotlib
+pip install scipy scikit-image matplotlib albumentations
 
 
 git clone https://github.com/PaddleJitLab/ConSinGAN

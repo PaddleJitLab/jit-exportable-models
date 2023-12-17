@@ -1,7 +1,8 @@
+ROOT=`pwd`
 mkdir build
 cd build
 source ~/.bashrc
-repos=`cat all.txt`
+repos=`find $ROOT -name "*.sh" -not -path "*/build/*" -not -name "start_all.sh"`
 for value in $repos
 do 
     conda activate base

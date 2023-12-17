@@ -1,9 +1,0 @@
-/home/ssd2/xiongkun/jit-exportable-models/PREN/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/FEW-SHOT/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/PYTORCH-HED/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/EAST/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/RECURRENT-VISUAl-ATTENTION/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/TISASREC.PYTORCH/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/DINO/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/CONSINGAN/start_export.sh
-/home/ssd2/xiongkun/jit-exportable-models/WIDE-RESNET.PYTORCH/start_export.sh

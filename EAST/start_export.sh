@@ -1,6 +1,6 @@
 ROOT=`pwd`
 
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+pip install scipy
 
 git clone https://github.com/PaddleJitLab/EAST
 cd EAST

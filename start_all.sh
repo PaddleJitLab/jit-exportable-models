@@ -1,16 +1,33 @@
 ROOT=`pwd`
+TORCH_VENV="torch-py310"
+PADDLE_VENV="paddle-py310"
 mkdir build
 cd build
-source ~/.bashrc
-repos=`find $ROOT -name "*.sh" -not -path "*/build/*" -not -name "start_all.sh"`
-for value in $repos
-do 
-    conda activate base
-    conda env remove --name jit_export
-    yes | conda create -n jit_export python=3.9
-    conda activate jit_export
-    pip install torch torchvision torchaudio
-    pip install paddlepaddle-gpu==0.0.0.post112 -f https://www.paddlepaddle.org.cn/whl/linux/gpu/develop.html
-    echo "[JIT]" $value
-    bash $value
+
+meowda init init_env.sh
+source init_env.sh
+repos=(
+  "CONSINGAN"
+  "PYTORCH-HED"
+  "EAST"
+  "PREN"
+  "RECURRENT-VISUAl-ATTENTION"
+  "TISASREC.PYTORCH"
+  "WIDE-RESNET.PYTORCH"
+  "FEW-SHOT"
+)
+for repo in "${repos[@]}"; do
+    # Init torch environment
+    meowda create $TORCH_VENV -p 3.10 --local -c
+    meowda activate $TORCH_VENV
+    meowda install torch torchvision -i https://download.pytorch.org/whl/cu126 -q
+
+    # Init paddle environment
+    meowda create $PADDLE_VENV -p 3.10 --local -c
+    meowda activate $PADDLE_VENV
+    meowda install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/ -q
+
+    # Run model export
+    echo "[JIT] start run model $repo"
+    bash ../$repo/start_export.sh $TORCH_VENV $PADDLE_VENV
 done 

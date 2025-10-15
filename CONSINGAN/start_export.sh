@@ -1,17 +1,21 @@
+TORCH_VENV=$1
+PADDLE_VENV=$2
 ROOT=`pwd`
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install scipy scikit-image matplotlib albumentations
-
+meowda init init_env.sh
+source init_env.sh
 
 git clone https://github.com/PaddleJitLab/ConSinGAN
 cd ConSinGAN
 git checkout master
+meowda activate $TORCH_VENV
+meowda install scipy scikit-image matplotlib 'albumentations<1' 'numpy<2'
 python export.py --train_mode generation --input_name Images/Generation/angkorwat.jpg
-
 
 cd $ROOT
 git clone https://github.com/PaddleJitLab/ConSinGAN.paddle
 cd ConSinGAN.paddle
 git checkout main
+meowda activate $PADDLE_VENV
+meowda install scipy scikit-image matplotlib 'albumentations<1' 'numpy<2'
 python export.py --train_mode generation --input_name Images/Generation/angkorwat.jpg

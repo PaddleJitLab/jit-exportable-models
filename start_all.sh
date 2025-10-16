@@ -20,6 +20,7 @@ repos=(
   "PYTORCH-BAYESIANCNN"
   "ADAPTSETNET"
   "TINY-FACES-PYTORCH"
+  "SUPCONTRAST"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

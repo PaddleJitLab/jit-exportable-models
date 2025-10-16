@@ -18,6 +18,7 @@ repos=(
   "SCALEDYOLOV4"
   "DEEPRECOMMENDER"
   "PYTORCH-BAYESIANCNN"
+  "ADAPTSETNET"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

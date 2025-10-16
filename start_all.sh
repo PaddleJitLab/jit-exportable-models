@@ -19,6 +19,7 @@ repos=(
   "DEEPRECOMMENDER"
   "PYTORCH-BAYESIANCNN"
   "ADAPTSETNET"
+  "TINY-FACES-PYTORCH"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

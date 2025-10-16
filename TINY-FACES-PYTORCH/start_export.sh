@@ -5,15 +5,15 @@ ROOT=`pwd`
 meowda init init_env.sh
 source init_env.sh
 
-git clone https://github.com/PaddleJitLab/AdaptSegNet --depth 10
-cd AdaptSegNet
+git clone https://github.com/PaddleJitLab/tiny-faces-pytorch --depth 10
+cd tiny-faces-pytorch
 git checkout master
 meowda activate $TORCH_VENV
 python export.py
 
 cd $ROOT
-git clone https://github.com/PaddleJitLab/AdaptSegNet.paddle --depth 10
-cd AdaptSegNet.paddle
+git clone https://github.com/PaddleJitLab/tiny-faces-pytorch.paddle --depth 10
+cd tiny-faces-pytorch.paddle
 git checkout main
 meowda activate $PADDLE_VENV
 python export.py

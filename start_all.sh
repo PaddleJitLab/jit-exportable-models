@@ -24,6 +24,7 @@ repos=(
   "TINY-FACES-PYTORCH"
   "SUPCONTRAST"
   "ESPNETV2"
+  "3D-RESNETS-PYTORCH"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

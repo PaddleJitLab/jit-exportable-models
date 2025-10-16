@@ -6,7 +6,7 @@ meowda init init_env.sh
 source init_env.sh
 pip install scipy
 
-git clone https://github.com/PaddleJitLab/EAST
+git clone https://github.com/PaddleJitLab/EAST --depth 10
 cd EAST
 git checkout master
 meowda activate $TORCH_VENV
@@ -15,7 +15,7 @@ python export.py
 
 
 cd $ROOT
-git clone https://github.com/PaddleJitLab/EAST.paddle
+git clone https://github.com/PaddleJitLab/EAST.paddle --depth 10
 cd EAST.paddle
 git checkout main
 meowda activate $PADDLE_VENV

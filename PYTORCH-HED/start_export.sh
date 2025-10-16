@@ -5,7 +5,7 @@ ROOT=`pwd`
 meowda init init_env.sh
 source init_env.sh
 
-git clone https://github.com/PaddleJitLab/pytorch-hed
+git clone https://github.com/PaddleJitLab/pytorch-hed --depth 10
 cd pytorch-hed
 git checkout master
 meowda activate $TORCH_VENV
@@ -14,7 +14,7 @@ python export.py
 
 
 cd $ROOT
-git clone https://github.com/PaddleJitLab/pytorch-hed.paddle
+git clone https://github.com/PaddleJitLab/pytorch-hed.paddle --depth 10
 cd pytorch-hed.paddle
 git checkout main
 meowda activate $PADDLE_VENV

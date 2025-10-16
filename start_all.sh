@@ -15,6 +15,9 @@ repos=(
   "TISASREC.PYTORCH"
   "WIDE-RESNET.PYTORCH"
   "FEW-SHOT"
+  "SCALEDYOLOV4"
+  "DEEPRECOMMENDER"
+  "PYTORCH-BAYESIANCNN"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

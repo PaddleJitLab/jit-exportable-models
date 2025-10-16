@@ -5,7 +5,7 @@ ROOT=`pwd`
 meowda init init_env.sh
 source init_env.sh
 
-git clone https://github.com/PaddleJitLab/Few-Shot
+git clone https://github.com/PaddleJitLab/Few-Shot --depth 10
 cd Few-Shot
 git checkout master
 meowda activate $TORCH_VENV
@@ -13,7 +13,7 @@ python export.py
 
 
 cd $ROOT
-git clone https://github.com/PaddleJitLab/Few-Shot.paddle
+git clone https://github.com/PaddleJitLab/Few-Shot.paddle --depth 10
 cd Few-Shot.paddle
 git checkout main
 meowda activate $PADDLE_VENV

@@ -1,3 +1,5 @@
+export PYTHONWARNINGS=ignore
+
 ROOT=`pwd`
 TORCH_VENV="torch-py310"
 PADDLE_VENV="paddle-py310"
@@ -21,6 +23,7 @@ repos=(
   "ADAPTSETNET"
   "TINY-FACES-PYTORCH"
   "SUPCONTRAST"
+  "ESPNETV2"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

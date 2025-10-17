@@ -27,6 +27,7 @@ repos=(
   "3D-RESNETS-PYTORCH"
   "PYTORCH-GAN"
   "MOCO"
+  "PAN.PYTORCH"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment

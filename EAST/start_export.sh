@@ -4,7 +4,6 @@ ROOT=`pwd`
 
 meowda init init_env.sh
 source init_env.sh
-pip install scipy
 
 git clone https://github.com/PaddleJitLab/EAST --depth 10
 cd EAST

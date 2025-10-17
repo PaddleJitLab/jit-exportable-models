@@ -25,6 +25,7 @@ repos=(
   "SUPCONTRAST"
   "ESPNETV2"
   "3D-RESNETS-PYTORCH"
+  "PYTORCH-GAN"
 )
 for repo in "${repos[@]}"; do
     # Init torch environment
